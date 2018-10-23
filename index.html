@@ -155,6 +155,18 @@
 				border: 1px #ccc solid;
 			}
 		</style>
+		
+<!-- 		 -->
+ <section class="part">
+        <h2>普通版（预览图在最底部）</h2>
+        <p>部分手机选择相册没有拍照这个选项</p>
+        <input type="file" class="file1">
+    </section>
+    <section class="part">
+        <h2>accept="image/*" 版</h2>
+        <p>有拍照这个选项，但不支持 FileReader，只得用 window.URL，"blob:" 类型的 url 无法在其他页面查看，且在 PC 端相比普通版打开选择界面速度要慢很多</p>
+        <input type="file" class="file2" accept="image/* capture=camera">
+    </section>
 
 		<h3>获取浏览器信息，含手机设备信息</h3>
 		<div id="elInfo">
