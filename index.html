@@ -62,6 +62,7 @@
 				} else if(isFireFox()) {
 					type = "火狐浏览器";
 				}
+				info += "<tr><td>来源页：</td><td>" + document.referrer + "</td></tr>";
 				info += "<tr><td>IE特有属性：</td><td>" + navigator.msManipulationViewsEnabled + "</td></tr>";
 				info += "<tr><td>浏览器类型：</td><td>" + type + "</td></tr>";
 				info += "<tr><td>weizhi ：</td><td>" + webkitPersistentStorage + "</td></tr>";
@@ -97,6 +98,7 @@
 				info += "<tr><td>颜色质量：</td><td>" + window.screen.colorDepth + "位</td></tr>";
 				info += "<tr><td>像素：</td><td>" + window.screen.deviceXDPI + "像素/英寸</td></tr>";
 				info += "<tr><td>字体是否平滑：</td><td>" + window.screen.fontSmoothingEnabled + "</td></tr>";
+				
 				//				info += "<tr><td>规定浏览器是否启用数据污点：</td><td>" + navigator.taintEnabled() + "</td></tr>";
 				info += "</table>";
 				document.getElementById("elInfo").innerHTML = info;
